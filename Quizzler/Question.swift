@@ -19,5 +19,3 @@ class Question {
   }
 }
 
-class myOtherClass{
-  let question = Question(text: "What is the meaning of Life?", correctAnswer: true)
