@@ -10,6 +10,7 @@
 		0DFA60E741A9A362F09B22B0 /* Pods_Quizzler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F32E9624A9001544DE234DE /* Pods_Quizzler.framework */; };
 		2F23CF0622ED22A900AE67B2 /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F23CF0522ED22A900AE67B2 /* QuestionBank.swift */; };
 		2F23CF0822ED2DFB00AE67B2 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F23CF0722ED2DFB00AE67B2 /* Question.swift */; };
+		2F23CF0C22EE90BC00AE67B2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F23CF0B22EE90BC00AE67B2 /* Constants.swift */; };
 		633646BF1B8C657400FF45E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633646BE1B8C657400FF45E2 /* AppDelegate.swift */; };
 		633646C11B8C657400FF45E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633646C01B8C657400FF45E2 /* ViewController.swift */; };
 		633646C61B8C657400FF45E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 633646C51B8C657400FF45E2 /* Images.xcassets */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		2F23CF0522ED22A900AE67B2 /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		2F23CF0722ED2DFB00AE67B2 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		2F23CF0B22EE90BC00AE67B2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2F32E9624A9001544DE234DE /* Pods_Quizzler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quizzler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		633646B91B8C657400FF45E2 /* Quizzler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizzler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		633646BD1B8C657400FF45E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 		633646B01B8C657400FF45E2 = {
 			isa = PBXGroup;
 			children = (
+				2F23CF0B22EE90BC00AE67B2 /* Constants.swift */,
 				AD6F1CCB20EBCFF600198C34 /* README.md */,
 				633646BB1B8C657400FF45E2 /* Quizzler */,
 				633646BA1B8C657400FF45E2 /* Products */,
@@ -93,7 +96,6 @@
 				D75BAE8BD0AB7E0C552269A8 /* Pods-Quizzler.debug.xcconfig */,
 				D86328986339B8566D48DCB9 /* Pods-Quizzler.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -250,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F23CF0C22EE90BC00AE67B2 /* Constants.swift in Sources */,
 				2F23CF0622ED22A900AE67B2 /* QuestionBank.swift in Sources */,
 				2F23CF0822ED2DFB00AE67B2 /* Question.swift in Sources */,
 				633646C11B8C657400FF45E2 /* ViewController.swift in Sources */,
