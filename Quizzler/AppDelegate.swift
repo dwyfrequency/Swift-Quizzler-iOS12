@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import mParticle_Apple_SDK
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +17,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        print(Secrets())
-        
+        print(Secrets().API_KEY)
+      
+        //initialize mParticle
+        let options = MParticleOptions(key: "78bd165eaab609469c7ff1373c8d65e3",
+                                       secret: "CFi41Ho1wBxrZW2zfdJsbfsvfv0izt3PL9iUZdPO7qL0ZnNh2ygRsgm1rHCm2ESr")
+        let identityRequest = MPIdentityApiRequest.withEmptyUser()
+        identityRequest.email = "jd@example.com"
+        identityRequest.customerId = "2222"
+        options.identifyRequest = identityRequest
+        options.onIdentifyComplete =  {(result: MPIdentityApiResult?, error: Error?) in
+          if (result?.user != nil) {
+            result?.user.setUserAttribute("occupation", value: "se")
+            result?.user.setUserAttribute("top_region", value: "North America")
+
+          } else {
+            //handle failure - see below
+          }
+        }
+      
+        MParticle.sharedInstance().start(with: options)
+
+      
         // Override point for customization after application launch.
         return true
     }

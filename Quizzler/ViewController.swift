@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import mParticle_Apple_SDK
 
 class ViewController: UIViewController {
     
@@ -64,6 +65,14 @@ class ViewController: UIViewController {
             alert.addAction(restartAction)
             present(alert, animated: true, completion: nil)
             
+            /*MPARTICLE*/
+            let event = MPEvent(name: "Game Finished", type: MPEventType.navigation)
+            
+            event?.info = ["category": "User Engagement", "title": "Trivia"];
+            
+            if (event != nil) {
+                MParticle.sharedInstance().logEvent(event!)
+            }
         } else{
             questionNumber += 1
         }
