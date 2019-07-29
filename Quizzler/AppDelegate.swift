@@ -17,11 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        print(Secrets().API_KEY)
+        print()
       
         //initialize mParticle
-        let options = MParticleOptions(key: "78bd165eaab609469c7ff1373c8d65e3",
-                                       secret: "CFi41Ho1wBxrZW2zfdJsbfsvfv0izt3PL9iUZdPO7qL0ZnNh2ygRsgm1rHCm2ESr")
+        let options = MParticleOptions(key: Secrets().API_KEY,
+                                       secret: Secrets().SECRET)
         let identityRequest = MPIdentityApiRequest.withEmptyUser()
         identityRequest.email = "jd@example.com"
         identityRequest.customerId = "2222"
