@@ -42,11 +42,12 @@ class ViewController: UIViewController {
     
     
     func updateUI() {
+        let totalQuestions : Int = allQuestions.list.count
         questionLabel.text = allQuestions.list[questionNumber].questionText
         scoreLabel.text = String(score);
-        progressLabel.text = "\(questionNumber + 1) / 13"
+        progressLabel.text = "\(questionNumber + 1) / \(totalQuestions)"
         // below, for each divide total screen width in 13ths and for each question add one 13th
-        progressBar.frame.size.width = (view.frame.size.width / 13) * CGFloat(questionNumber + 1)
+        progressBar.frame.size.width = (view.frame.size.width / CGFloat(totalQuestions)) * CGFloat(questionNumber + 1)
     }
     
     func incrementScore() -> Void {
@@ -83,6 +84,7 @@ class ViewController: UIViewController {
     
     func startOver() {
        questionNumber = 0
+       score = 0
        updateUI()
     }
 }
