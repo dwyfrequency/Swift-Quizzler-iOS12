@@ -48,8 +48,14 @@ class ViewController: UIViewController {
 
     func nextQuestion() {
         if(questionNumber == allQuestions.list.count - 1) {
+           let alert =  UIAlertController(title: "Awesome", message: "You've finished all the questions. Do you want to play again?", preferredStyle: .alert)
             print("End of quiz")
-            questionNumber = 0
+            let restartAction = UIAlertAction(title: "Restart", style: .default) { (UIAlertAction) in
+                self.startOver()
+            }
+            alert.addAction(restartAction)
+            present(alert, animated: true, completion: nil)
+            
         } else{
             questionNumber += 1
         }
@@ -69,9 +75,7 @@ class ViewController: UIViewController {
     
     
     func startOver() {
-       
+       questionNumber = 0
+       updateUI()
     }
-    
-
-    
 }
